@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "SafeAccess",
+    "slug": "safeaccess-app",
+    "scheme": "safeaccess",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#0B0D0E",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "cl.safeaccess.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SafeAccess usa la cámara para tomar la foto del trabajador y verificar casco y chaleco. La imagen no se guarda."
+      }
+    },
+    "android": {
+      "package": "cl.safeaccess.app",
+      "permissions": [
+        "CAMERA"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon_adaptive_fg.png",
+        "backgroundImage": "./assets/icon_adaptive_bg.png"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/logo.png",
+          "imageWidth": 160,
+          "backgroundColor": "#0B0D0E"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "SafeAccess usa la cámara para tomar la foto del trabajador. La imagen no se guarda."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
